@@ -1,0 +1,60 @@
+# docker-compose.yml
+
+services:
+  myapp_mysql:
+    image: 'mysql:5.7.38'
+    container_name: myapp_mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: myapp_db
+      MYSQL_USER: myapp
+      MYSQL_PASSWORD: myapp
+      MYSQL_TCP_PORT: 3307
+    ports:
+      - 3307:3307
+    volumes:
+      - dbdata:/var/lib/mysql
+      - ./.docker/mysql:/docker-entrypoint-initdb.d
+
+  myapp_phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    depends_on:
+      - myapp_mysql
+    restart: always
+    container_name: myapp_phpmyadmin
+    environment:
+      PMA_HOST: myapp_mysql
+      PMA_PORT: 3307
+    ports:
+      - 8001:80
+
+  myapp_phpfpm:
+    build: .docker/php-fpm
+    container_name: myapp_phpfpm
+    working_dir: /app
+    environment:
+      DATABASE_URL: ${DATABASE_URL}
+      MAILER_DSN: ${MAILER_DSN}
+    volumes:
+      - .:/app/
+
+  myapp_nginx:
+    build: .docker/nginx
+    depends_on:
+      - myapp_phpfpm
+    container_name: myapp_nginx
+    working_dir: /app
+    volumes:
+      - .:/app/
+    ports:
+      - 8000:80
+
+  myapp_mailer:
+    image: schickling/mailcatcher
+    ports:
+      - 1025:1025
+      - 1080:1080
+
+volumes:
+  dbdata:

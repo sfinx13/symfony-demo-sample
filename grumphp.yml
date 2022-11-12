@@ -1,0 +1,18 @@
+grumphp:
+    tasks:
+        git_blacklist:
+            keywords:
+                - 'var_dump('
+                - 'dump('
+                - ' dd('
+                - ';dd('
+                - 'die('
+                - 'exit('
+        phpstan: ~
+        yamllint: ~
+        shell:
+            metadata:
+                label: 'php-cs-fixer && phpunit'
+            scripts:
+                - ["-c", "make cs-check"]
+                - ["-c", "make test"]
