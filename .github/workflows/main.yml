@@ -82,11 +82,11 @@ jobs:
 
       # https://github.com/phpstan/phpstan
       - name: Analyse PHP Code (PHPStan)
-        run: make stan
+        run: composer stan
 
       # https://github.com/FriendsOfPHP/PHP-CS-Fixer
       - name: Check PHP coding standard (PHP-CS-Fixer)
-        run: make cs-check
+        run: composer cs-check
 
       - name: Load Doctrine fixtures
         run: make create-db-test
