@@ -78,7 +78,11 @@ jobs:
       - name: Check PHP coding standard (PHP-CS-Fixer)
         run: composer cs-check
 
-      # Tests
-      - name: Run unit and functional tests
-        run: |
-          XDEBUG_MODE=coverage php bin/phpunit --stop-on-failure
+      - name: "Install PHPUnit"
+        run: vendor/bin/simple-phpunit install
+
+      - name: "PHPUnit version"
+        run: vendor/bin/simple-phpunit --version
+
+      - name: "Run tests"
+        run: vendor/bin/simple-phpunit -v
