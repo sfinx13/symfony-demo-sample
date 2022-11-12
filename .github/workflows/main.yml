@@ -88,11 +88,11 @@ jobs:
       - name: Check PHP coding standard (PHP-CS-Fixer)
         run: composer cs-check
 
-      - name: Load Doctrine fixtures
-        run: |
-          php bin/console --env=test doctrine:database:create --no-interaction
-          php bin/console --env=test doctrine:migrations:migrate --no-interaction
-          php bin/console --env=test doctrine:fixtures:load --no-interaction
+#      - name: Load Doctrine fixtures
+#        run: |
+#          php bin/console --env=test doctrine:database:create --no-interaction
+#          php bin/console --env=test doctrine:migrations:migrate --no-interaction
+#          php bin/console --env=test doctrine:fixtures:load --no-interaction
 
       - name: Run tests
         run: ./vendor/bin/phpunit --stop-on-failure --testdox -d memory_limit=-1
