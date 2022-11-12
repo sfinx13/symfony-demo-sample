@@ -94,5 +94,5 @@ jobs:
           php bin/console --env=test doctrine:migrations:migrate --no-interaction
           php bin/console --env=test doctrine:fixtures:load --no-interaction
 
-      - name: "Run tests"
+      - name: Run tests
         run: ./vendor/bin/phpunit --stop-on-failure --testdox -d memory_limit=-1
