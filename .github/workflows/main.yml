@@ -89,7 +89,10 @@ jobs:
         run: composer cs-check
 
       - name: Load Doctrine fixtures
-        run: make create-db-test
+        run: |
+          php bin/console --env=test doctrine:database:create --no-interaction
+          php bin/console --env=test doctrine:migrations:migrate --no-interaction
+          php bin/console --env=test doctrine:fixtures:load --no-interaction
 
       - name: "Run tests"
-        run: make test
+        run: ./vendor/bin/phpunit --stop-on-failure --testdox -d memory_limit=-1
