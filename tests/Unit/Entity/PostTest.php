@@ -3,9 +3,9 @@
 namespace App\Tests\Unit\Entity;
 
 use App\Entity\Behaviour\EntitySlugableInterface;
-use PHPUnit\Framework\TestCase;
 use App\Entity\Enum\Status;
 use App\Entity\Post;
+use PHPUnit\Framework\TestCase;
 
 class PostTest extends TestCase
 {

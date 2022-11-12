@@ -8,22 +8,18 @@ use App\Entity\Behaviour\SlugableTrait;
 use App\Entity\Behaviour\TimestampableTrait;
 use App\Entity\DoctrineType\StatusType;
 use App\Entity\Enum\Status;
-use App\EventListener\EntitySlugableListener;
 use App\Repository\PostRepository;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
-use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
-use Symfony\Component\String\Slugger\SluggerInterface;
 use Symfony\Component\Validator\Constraints as Assert;
-use Gedmo\Mapping\Annotation as Gedmo;
 
 #[ORM\Entity(repositoryClass: PostRepository::class)]
 #[ORM\HasLifecycleCallbacks()]
 class Post implements EntitySlugableInterface
 {
     use ActivableTrait;
-    use TimestampableTrait;
     use SlugableTrait;
+    use TimestampableTrait;
 
     #[ORM\Id]
     #[ORM\GeneratedValue]

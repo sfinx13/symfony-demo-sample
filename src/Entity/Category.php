@@ -16,8 +16,8 @@ use Doctrine\ORM\Mapping as ORM;
 class Category implements EntitySlugableInterface
 {
     use ActivableTrait;
-    use TimestampableTrait;
     use SlugableTrait;
+    use TimestampableTrait;
 
     #[ORM\Id]
     #[ORM\GeneratedValue]

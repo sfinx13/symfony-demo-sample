@@ -26,7 +26,6 @@ class LoadPostData extends LoadEntityData implements OrderedFixtureInterface
                 $manager->getRepository(Category::class)->findOneBy(['slug' => $row['category']])
             );
 
-
         $manager->persist($post);
     }
 

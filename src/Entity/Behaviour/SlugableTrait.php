@@ -2,8 +2,8 @@
 
 namespace App\Entity\Behaviour;
 
-use Symfony\Component\String\Slugger\SluggerInterface;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\String\Slugger\SluggerInterface;
 
 trait SlugableTrait
 {
