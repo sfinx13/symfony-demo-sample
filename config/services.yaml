@@ -22,12 +22,9 @@ services:
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
-#    _instanceof:
-#        App\Entity\DoctrineType\AbstractEnumType:
-#            tags: ['app.doctrine_enum_type']
-
-    App\Entity\DoctrineType\StatusType:
-        tags: ['app.doctrine_enum_type']
+    _instanceof:
+        App\DoctrineType\AbstractEnumType:
+            tags: ['app.doctrine_enum_type']
 
     App\EventListener\EntitySlugableListener:
         tags:

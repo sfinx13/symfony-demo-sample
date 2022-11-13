@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Entity\DoctrineType;
+namespace App\DoctrineType;
 
 use App\Entity\Enum\Status;
 

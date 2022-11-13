@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Entity\DoctrineType;
+namespace App\DoctrineType;
 
 use Doctrine\DBAL\Platforms\AbstractPlatform;
 use Doctrine\DBAL\Types\Type;
@@ -25,7 +25,7 @@ abstract class AbstractEnumType extends Type
 
     public function convertToPHPValue($value, AbstractPlatform $platform)
     {
-        if (false === enum_exists($this->getEnumsClass(), true)) {
+        if (false === \enum_exists($this->getEnumsClass(), true)) {
             throw new \LogicException('This class should be an enum');
         }
 

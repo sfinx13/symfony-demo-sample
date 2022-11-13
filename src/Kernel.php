@@ -2,7 +2,7 @@
 
 namespace App;
 
-use App\Entity\DoctrineType\AbstractEnumType;
+use App\DoctrineType\AbstractEnumType;
 use Symfony\Bundle\FrameworkBundle\Kernel\MicroKernelTrait;
 use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
