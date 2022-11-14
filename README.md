@@ -13,9 +13,10 @@ make build
 - [x] **[Automation tool]** Makefile 
 - [x] **[QA]** php-cs-fixer
 - [x] **[QA]** phpstan
+- [x] **[QA]** Grumphp
 - [x] **[Test]** Phpunit
 - [ ] **[Test]** Cypress
-- [ ] **[Test]** Setup smoking test
+- [x] **[Test]** Setup smoking test
 - [x] **[Environment]** Dockerize app with docker-compose
 - [x] **[CI]** Set continous integration with GitHub Actions
 - [x] **[CD]** Automatic deployment to cloud provider 
@@ -28,5 +29,5 @@ make build
 - [ ] **[Session]** Store session with redis
 - [ ] **[Error reporting]** Sentry 
 - [ ] **[Observability]** Grafana et Prometheus
-- [ ] **[Storage object]** Cloud Provider S3 Compatibiliy
-- [ ] **[Mailing]** Use Email provider
+- [ ] **[Storage object]** Store assets to S3 Bucket Compatibiliy
+- [ ] **[Mailing]** Sending email with multiple provider
