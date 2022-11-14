@@ -2,12 +2,12 @@
 
 namespace App\Entity;
 
+use App\DoctrineType\StatusType;
 use App\Entity\Behaviour\ActivableTrait;
 use App\Entity\Behaviour\EntitySlugableInterface;
 use App\Entity\Behaviour\SlugableTrait;
 use App\Entity\Behaviour\TimestampableTrait;
 use App\Entity\Enum\Status;
-use App\DoctrineType\StatusType;
 use App\Repository\PostRepository;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
