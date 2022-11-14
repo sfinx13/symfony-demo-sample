@@ -13,12 +13,20 @@ make build
 - [x] **[Automation tool]** Makefile 
 - [x] **[QA]** php-cs-fixer
 - [x] **[QA]** phpstan
-- [x] **[Test]** phpunit
-- [ ] **[Test]** cypress
+- [x] **[Test]** Phpunit
+- [ ] **[Test]** Cypress
 - [ ] **[Test]** Setup smoking test
 - [x] **[Environment]** Dockerize app with docker-compose
 - [x] **[CI]** Set continous integration with GitHub Actions
+- [x] **[CD]** Automatic deployment to cloud provider 
 - [x] **[Dev]** Enum custom doctrine type
 - [x] **[Dev]** Init fixture loader
 - [x] **[Dev]** Add standard behaviour trait (timestamble, activable, slugable)
 - [ ] **[Dev]** Add AbstractManager
+- [ ] **[Dev]** Get Results From Doctrine As DTOs
+- [ ] **[Dev]** Enabling Vue.js
+- [ ] **[Session]** Store session with redis
+- [ ] **[Error reporting]** Sentry 
+- [ ] **[Observability]** Grafana et Prometheus
+- [ ] **[Storage object]** Cloud Provider S3 Compatibiliy
+- 
