@@ -19,13 +19,14 @@ make build
 - [x] **[Test]** Setup smoking test
 - [x] **[Environment]** Dockerize app with docker-compose
 - [x] **[CI]** Set continous integration with GitHub Actions
-- [x] **[CD]** Automatic deployment to cloud provider 
+- [ ] **[CD]** Automatic deployment to cloud provider
+- [ ] **[Dev]** User management workflow
 - [x] **[Dev]** Enum custom doctrine type
-- [x] **[Dev]** Init fixture loader
+- [x] **[Dev]** Init fixture loaders
 - [x] **[Dev]** Add standard behaviour trait (timestamble, activable, slugable)
 - [x] **[Dev]** Add AbstractManager
-- [ ] **[Dev]** Get Results From Doctrine As DTOs
-- [ ] **[Dev]** Enabling Vue.js
+- [ ] **[Dev]** Example to get Results From Doctrine As DTOs
+- [ ] **[Dev]** Enabling Vue.js/Typescript
 - [ ] **[Session]** Store session with redis
 - [ ] **[Error reporting]** Sentry 
 - [ ] **[Observability]** Grafana et Prometheus
