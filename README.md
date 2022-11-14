@@ -22,7 +22,7 @@ make build
 - [x] **[Dev]** Enum custom doctrine type
 - [x] **[Dev]** Init fixture loader
 - [x] **[Dev]** Add standard behaviour trait (timestamble, activable, slugable)
-- [ ] **[Dev]** Add AbstractManager
+- [x] **[Dev]** Add AbstractManager
 - [ ] **[Dev]** Get Results From Doctrine As DTOs
 - [ ] **[Dev]** Enabling Vue.js
 - [ ] **[Session]** Store session with redis
