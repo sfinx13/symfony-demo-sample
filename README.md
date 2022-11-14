@@ -27,6 +27,7 @@ make build
 - [x] **[Dev]** Add AbstractManager
 - [ ] **[Dev]** Example to get Results From Doctrine As DTOs
 - [ ] **[Dev]** Enabling Vue.js/Typescript
+- [ ] **[Dev]** Handle webhook in async way via Messenger component
 - [ ] **[Session]** Store session with redis
 - [ ] **[Error reporting]** Sentry 
 - [ ] **[Observability]** Grafana et Prometheus
