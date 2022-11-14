@@ -100,4 +100,6 @@ jobs:
           DATABASE_URL: mysql://root:myapp@127.0.0.1:${{ job.services.mysql.ports['3306'] }}/myapp_db
 
       - name: Run tests
-        run: ./vendor/bin/phpunit --stop-on-failure --testdox -d memory_limit=-1
+        run: |
+        composer require --dev dama/doctrine-test-bundle
+        ./vendor/bin/phpunit --stop-on-failure --testdox -d memory_limit=-1

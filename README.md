@@ -29,4 +29,4 @@ make build
 - [ ] **[Error reporting]** Sentry 
 - [ ] **[Observability]** Grafana et Prometheus
 - [ ] **[Storage object]** Cloud Provider S3 Compatibiliy
-- 
+- [ ] **[Mailing]** Use Email provider
