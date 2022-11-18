@@ -9,7 +9,8 @@ on:
     branches:
       - main
       - develop
-
+  schedule:
+      - cron: '20 19 * * *'
 jobs:
   code-quality:
     name: demo-app (PHP ${{ matrix.php-versions }})
@@ -106,3 +107,6 @@ jobs:
         env:
           DATABASE_URL: mysql://root:myapp@127.0.0.1:${{ job.services.mysql.ports['3306'] }}/myapp_db
 
+      - name: Build docker containers
+        run: |
+          make build
