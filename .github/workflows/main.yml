@@ -10,7 +10,7 @@ on:
       - main
       - develop
   schedule:
-      - cron: '20 19 * * *'
+      - cron: '30 19 * * *'
 jobs:
   code-quality:
     name: demo-app (PHP ${{ matrix.php-versions }})
@@ -106,7 +106,3 @@ jobs:
           ./vendor/bin/phpunit --stop-on-failure --testdox -d memory_limit=-1
         env:
           DATABASE_URL: mysql://root:myapp@127.0.0.1:${{ job.services.mysql.ports['3306'] }}/myapp_db
-
-      - name: Build docker containers
-        run: |
-          make build
