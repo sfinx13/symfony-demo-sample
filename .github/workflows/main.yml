@@ -10,7 +10,7 @@ on:
       - main
       - develop
   schedule:
-      - cron: '30 19 * * *'
+      - cron: '50 18 * * *'
 jobs:
   code-quality:
     name: demo-app (PHP ${{ matrix.php-versions }})

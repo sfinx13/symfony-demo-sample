@@ -1,5 +1,7 @@
 # Symfony socle demo
 
+[![demo-app CI](https://github.com/sfinx13/symfony-demo-sample/actions/workflows/main.yml/badge.svg?branch=main)](https://github.com/sfinx13/symfony-demo-sample/actions/workflows/main.yml)
+
 ## Getting Started
 Symfony base technical setup with Docker, QA tools and tests tools, CI gitub-action, makefile.
 
